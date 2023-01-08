@@ -4,7 +4,7 @@ require 'prawn'
 require 'rails'
 
 class IMBpdf
-  # a function that can be called later. no return, generates a PDF file stored to a predefined folder. 3x1 thermal
+  # a function that can be called later. no return, generates a PDF file stored to a predefined folder
   def self.createLabel(
     id, type, mailer, serial, routing, name,
     addrL1, addrL2, addrL3
@@ -15,10 +15,10 @@ class IMBpdf
                                serial,
                                routing)
 
-    imbFontDir = "imb/fonts/USPSIMBStandard.ttf"
-    textFontDir = "imb/fonts/PhantomSans0.8-Regular.ttf"
+    imbFontDir = "/Users/tejas/Developer/mailcorgi_rails/api/shipping/imb/fonts/USPSIMBStandard.ttf"
+    textFontDir = "/Users/tejas/Developer/mailcorgi_rails/api/shipping/imb/fonts/PhantomSans0.8-Regular.ttf"
 
-    saveDir = "imb/files/"
+    saveDir = "/Users/tejas/Developer/mailcorgi_rails/api/shipping/imb/files/"
 
     pdfName = saveDir + mailer + "_" + serial + ".pdf"
 

@@ -44,3 +44,7 @@ class IMBtracking
 end
 # response.code
 # response.body
+
+token = IMBtracking.getToken("username", "password")
+tracking = IMBtracking.trackByIMB(token, "0131090333097100000101810")
+p tracking
